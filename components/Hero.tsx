@@ -2,12 +2,10 @@
 
 import React from "react"
 import { CustomButton } from "."
+import Image from "next/image"
 
 function Hero() {
-
-  function handleScroll() {
-
-  }
+	function handleScroll() {}
 	return (
 		<div className="hero">
 			<div className="flex-1 pt-36 padding-x">
@@ -23,8 +21,14 @@ function Hero() {
 				<CustomButton
 					title="Explore Cars"
 					containerStyles="bg-primary-blue text-white rounded-full mt-10"
-          handleClick={handleScroll}
+					handleClick={handleScroll}
 				/>
+			</div>
+			<div className="hero__image_container">
+				<div className="hero__image">
+					<Image src="/hero.png" alt="hero" fill className="object-contain" />
+          <div className="hero__image-overlay" />
+				</div>
 			</div>
 		</div>
 	)
